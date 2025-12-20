@@ -1,103 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Our Menu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
-    }
+<meta charset="UTF-8">
+<title>Your Memories – Traditional Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: linear-gradient(135deg, #f97316, #fb923c);
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #fdf6e3;
+  color: #3b2f2f;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
+header {
+  background: linear-gradient(135deg, #7c2d12, #b45309);
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
 
-    header p {
-      margin-top: 8px;
-      font-size: 14px;
-      opacity: 0.9;
-    }
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
 
-    .container {
-      padding: 20px;
-    }
+header p {
+  margin-top: 6px;
+  font-size: 14px;
+}
 
-    .section {
-      margin-bottom: 30px;
-    }
+.toggle {
+  margin-top: 12px;
+}
 
-    .section h2 {
-      font-size: 20px;
-      margin-bottom: 15px;
-      border-left: 4px solid #f97316;
-      padding-left: 10px;
-    }
+.toggle button {
+  background: #fde68a;
+  border: none;
+  padding: 6px 14px;
+  margin: 0 5px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .item {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid #1e293b;
-    }
+.container {
+  padding: 20px;
+}
 
-    .item span:last-child {
-      color: #fbbf24;
-      font-weight: 600;
-    }
+.section {
+  margin-bottom: 32px;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 12px;
-      color: #94a3b8;
-    }
-  </style>
+.section-title {
+  font-size: 20px;
+  margin-bottom: 14px;
+  border-left: 5px solid #a16207;
+  padding-left: 12px;
+}
+
+.card {
+  background: #fffaf0;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: #92400e;
+}
+
+.veg {
+  color: green;
+  font-weight: bold;
+}
+
+.nonveg {
+  color: red;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  background: #fde68a;
+  color: #92400e;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.highlight {
+  text-align: center;
+  font-style: italic;
+  margin-top: 10px;
+  color: #6b3f1d;
+}
+
+footer {
+  background: #3b2f2f;
+  color: #fef3c7;
+  padding: 18px;
+  text-align: center;
+  font-size: 13px;
+}
+</style>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.innerText = el.getAttribute("data-" + lang);
+  });
+}
+</script>
+
 </head>
+
 <body>
 
-  <header>
-    <h1>🍽️ Your Restaurant</h1>
-    <p>Scan • Order • Enjoy</p>
-  </header>
+<header>
+  <h1>🌾 YOUR MEMORIES</h1>
+  <p data-en="Traditional Tamil Village Experience"
+     data-ta="பாரம்பரிய தமிழ் கிராம அனுபவம்">
+     Traditional Tamil Village Experience
+  </p>
 
-  <div class="container">
+  <div class="toggle">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ta')">தமிழ்</button>
+  </div>
+</header>
 
-    <div class="section">
-      <h2>Starters</h2>
-      <div class="item"><span>Veg Spring Roll</span><span>₹120</span></div>
-      <div class="item"><span>Chicken 65</span><span>₹220</span></div>
+<div class="container">
+
+  <!-- WELCOME DRINKS -->
+  <div class="section">
+    <div class="section-title">🌺 Welcome Drinks</div>
+    <div class="card">
+      <div class="item"><span data-en="Degree Filter Coffee" data-ta="டிகிரி காபி">Degree Filter Coffee</span><span class="veg">🟢 ₹30</span></div>
+      <div class="item"><span data-en="Neer Mor" data-ta="நீர் மோர்">Neer Mor</span><span class="veg">🟢 ₹25</span></div>
+      <div class="item"><span data-en="Panagam" data-ta="பானகம்">Panagam</span><span class="veg">🟢 ₹30</span></div>
+      <div class="item"><span data-en="Nannari Sarbath" data-ta="நன்னாரி சர்பத்">Nannari Sarbath</span><span class="veg">🟢 ₹40</span></div>
+      <div class="item"><span data-en="Goli Soda" data-ta="கோலி சோடா">Goli Soda</span><span class="veg">🟢 ₹40</span></div>
     </div>
-
-    <div class="section">
-      <h2>Main Course</h2>
-      <div class="item"><span>Veg Biryani</span><span>₹200</span></div>
-      <div class="item"><span>Butter Chicken</span><span>₹280</span></div>
-    </div>
-
-    <div class="section">
-      <h2>Beverages</h2>
-      <div class="item"><span>Lime Soda</span><span>₹60</span></div>
-      <div class="item"><span>Cold Coffee</span><span>₹90</span></div>
-    </div>
-
   </div>
 
-  <footer>
-    Powered by QR Menu
-  </footer>
+  <!-- WEEKDAY MEAL -->
+  <div class="section">
+    <div class="section-title">🍌 Traditional Banana Leaf Meal</div>
+    <div class="card">
+      <span class="badge" data-en="Mon–Fri • ₹249 per person"
+            data-ta="திங்கள்–வெள்ளி • ₹249">
+            Mon–Fri • ₹249 per person
+      </span>
+
+      <div class="item"><span data-en="White Rice" data-ta="வெள்ளை சாதம்">White Rice</span><span class="veg">🟢</span></div>
+      <div class="item"><span data-en="Sambar, Rasam, More Kuzhambu"
+                               data-ta="சாம்பார், ரசம், மோர் குழம்பு">
+                               Sambar, Rasam, More Kuzhambu</span></div>
+      <div class="item"><span data-en="Poriyal, Kootu" data-ta="பொரியல், கூட்டு">Poriyal, Kootu</span></div>
+      <div class="item"><span data-en="Curd, Dessert" data-ta="தயிர், இனிப்பு">Curd, Dessert</span></div>
+
+      <div class="highlight">“Paati veettu saapadu nyabagam”</div>
+    </div>
+  </div>
+
+  <!-- SUNDAY -->
+  <div class="section">
+    <div class="section-title">🍗 Sunday & Festival Special</div>
+    <div class="card">
+      <div class="item"><span data-en="Veg Naatu Feast" data-ta="சைவ நாட்டுக் விருந்து">Veg Naatu Feast</span><span class="veg">🟢 ₹329</span></div>
+      <div class="item"><span data-en="Naatu Kozhi Feast" data-ta="நாட்டு கோழி விருந்து">Naatu Kozhi Feast</span><span class="nonveg">🔴 ₹399</span></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+🌾 Freshly prepared • Banana Leaf Served • Olden-day Recipes<br>
+A journey back to our childhood memories
+</footer>
 
 </body>
 </html>
