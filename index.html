@@ -1,88 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Restaurant Menu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Our Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .container {
       padding: 20px;
     }
-    h1 {
-      text-align: center;
+
+    .section {
+      margin-bottom: 30px;
     }
-    h2 {
-      margin-top: 25px;
-      color: #333;
+
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      border-left: 4px solid #f97316;
+      padding-left: 10px;
     }
+
     .item {
       display: flex;
       justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px dashed #ccc;
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .item span:last-child {
+      color: #fbbf24;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
 
-  <h1>🍽️ Our Menu</h1>
+  <header>
+    <h1>🍽️ Your Restaurant</h1>
+    <p>Scan • Order • Enjoy</p>
+  </header>
 
-  <h2>Starters</h2>
-  <div class="item"><span>Veg Spring Roll</span><span>₹120</span></div>
-  <div class="item"><span>Chicken 65</span><span>₹220</span></div>
+  <div class="container">
 
-  <h2>Main Course</h2>
-  <div class="item"><span>Veg Biryani</span><span>₹200</span></div>
-  <div class="item"><span>Butter Chicken</span><span>₹280</span></div>
+    <div class="section">
+      <h2>Starters</h2>
+      <div class="item"><span>Veg Spring Roll</span><span>₹120</span></div>
+      <div class="item"><span>Chicken 65</span><span>₹220</span></div>
+    </div>
 
-  <h2>Beverages</h2>
-  <div class="item"><span>Lime Soda</span><span>₹60</span></div>
-  <div class="item"><span>Cold Coffee</span><span>₹90</span></div>
+    <div class="section">
+      <h2>Main Course</h2>
+      <div class="item"><span>Veg Biryani</span><span>₹200</span></div>
+      <div class="item"><span>Butter Chicken</span><span>₹280</span></div>
+    </div>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Restaurant Menu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    h2 {
-      margin-top: 25px;
-      color: #333;
-    }
-    .item {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px dashed #ccc;
-    }
-  </style>
-</head>
-<body>
+    <div class="section">
+      <h2>Beverages</h2>
+      <div class="item"><span>Lime Soda</span><span>₹60</span></div>
+      <div class="item"><span>Cold Coffee</span><span>₹90</span></div>
+    </div>
 
-  <h1>🍽️ Our Menu</h1>
+  </div>
 
-  <h2>Starters</h2>
-  <div class="item"><span>Veg Spring Roll</span><span>₹120</span></div>
-  <div class="item"><span>Chicken 65</span><span>₹220</span></div>
-
-  <h2>Main Course</h2>
-  <div class="item"><span>Veg Biryani</span><span>₹200</span></div>
-  <div class="item"><span>Butter Chicken</span><span>₹280</span></div>
-
-  <h2>Beverages</h2>
-  <div class="item"><span>Lime Soda</span><span>₹60</span></div>
-  <div class="item"><span>Cold Coffee</span><span>₹90</span></div>
+  <footer>
+    Powered by QR Menu
+  </footer>
 
 </body>
 </html>
