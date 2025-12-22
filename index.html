@@ -2,192 +2,197 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Your Memories – Traditional Menu</title>
+<title>Your Memories – Heritage Menu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  margin: 0;
+body{
+  margin:0;
   font-family: Georgia, serif;
-  background: #fdf6e3;
-  color: #3b2f2f;
+  background:#fdf6e3;
+  color:#3b2f2f;
 }
 
-header {
-  background: linear-gradient(135deg, #7c2d12, #b45309);
-  color: #fff;
-  padding: 28px 20px;
-  text-align: center;
+header{
+  background:linear-gradient(135deg,#7c2d12,#b45309);
+  color:#fff;
+  padding:32px 20px;
+  text-align:center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 26px;
+header h1{
+  margin:0;
+  font-size:30px;
 }
 
-header p {
-  margin-top: 6px;
-  font-size: 14px;
+header p{
+  margin-top:8px;
+  font-size:14px;
+  line-height:1.5;
 }
 
-.toggle {
-  margin-top: 12px;
+.container{
+  padding:20px;
 }
 
-.toggle button {
-  background: #fde68a;
-  border: none;
-  padding: 6px 14px;
-  margin: 0 5px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
+.section{
+  margin-bottom:40px;
 }
 
-.container {
-  padding: 20px;
+.section-title{
+  font-size:22px;
+  margin-bottom:16px;
+  border-left:6px solid #a16207;
+  padding-left:12px;
 }
 
-.section {
-  margin-bottom: 32px;
+.sub-title{
+  font-size:17px;
+  margin:18px 0 10px;
+  color:#6b3f1d;
 }
 
-.section-title {
-  font-size: 20px;
-  margin-bottom: 14px;
-  border-left: 5px solid #a16207;
-  padding-left: 12px;
+.card{
+  background:#fffaf0;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.card {
-  background: #fffaf0;
-  border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 15px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+.item{
+  padding:6px 0;
+  font-size:15px;
 }
 
-.item {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 0;
-  font-size: 15px;
+.veg{ color:green; font-weight:bold; }
+.nonveg{ color:#b91c1c; font-weight:bold; }
+
+.desc{
+  font-size:13px;
+  color:#6b3f1d;
+  margin-left:6px;
 }
 
-.price {
-  font-weight: bold;
-  color: #92400e;
+.highlight{
+  text-align:center;
+  font-style:italic;
+  margin-top:12px;
+  color:#6b3f1d;
 }
 
-.veg {
-  color: green;
-  font-weight: bold;
-}
-
-.nonveg {
-  color: red;
-  font-weight: bold;
-}
-
-.badge {
-  display: inline-block;
-  background: #fde68a;
-  color: #92400e;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin-bottom: 8px;
-}
-
-.highlight {
-  text-align: center;
-  font-style: italic;
-  margin-top: 10px;
-  color: #6b3f1d;
-}
-
-footer {
-  background: #3b2f2f;
-  color: #fef3c7;
-  padding: 18px;
-  text-align: center;
-  font-size: 13px;
+footer{
+  background:#3b2f2f;
+  color:#fef3c7;
+  padding:22px;
+  text-align:center;
+  font-size:13px;
+  line-height:1.6;
 }
 </style>
-
-<script>
-function switchLang(lang) {
-  document.querySelectorAll("[data-en]").forEach(el => {
-    el.innerText = el.getAttribute("data-" + lang);
-  });
-}
-</script>
-
 </head>
 
 <body>
 
 <header>
   <h1>🌾 YOUR MEMORIES</h1>
-  <p data-en="Traditional Tamil Village Experience"
-     data-ta="பாரம்பரிய தமிழ் கிராம அனுபவம்">
-     Traditional Tamil Village Experience
+  <p>
+    Where We Started<br>
+    80s–90s Tamil Village Food • Folk Culture • Childhood Memories
   </p>
-
-  <div class="toggle">
-    <button onclick="switchLang('en')">English</button>
-    <button onclick="switchLang('ta')">தமிழ்</button>
-  </div>
 </header>
 
 <div class="container">
 
-  <!-- WELCOME DRINKS -->
-  <div class="section">
-    <div class="section-title">🌺 Welcome Drinks</div>
-    <div class="card">
-      <div class="item"><span data-en="Degree Filter Coffee" data-ta="டிகிரி காபி">Degree Filter Coffee</span><span class="veg">🟢 ₹30</span></div>
-      <div class="item"><span data-en="Neer Mor" data-ta="நீர் மோர்">Neer Mor</span><span class="veg">🟢 ₹25</span></div>
-      <div class="item"><span data-en="Panagam" data-ta="பானகம்">Panagam</span><span class="veg">🟢 ₹30</span></div>
-      <div class="item"><span data-en="Nannari Sarbath" data-ta="நன்னாரி சர்பத்">Nannari Sarbath</span><span class="veg">🟢 ₹40</span></div>
-      <div class="item"><span data-en="Goli Soda" data-ta="கோலி சோடா">Goli Soda</span><span class="veg">🟢 ₹40</span></div>
+<!-- HERITAGE VEG -->
+<div class="section">
+  <div class="section-title">🍌 HERITAGE VEG MENU</div>
+
+  <div class="sub-title">🍚 Pazhaya Murai Unavu (Heritage Rice)</div>
+  <div class="card">
+    <div class="item veg">🟢 Pazhaya Sadham – பழைய சோறு
+      <div class="desc">(Overnight soaked rice – farmer’s food)</div>
     </div>
+    <div class="item veg">🟢 Pazhaya Kanji – பழைய கஞ்சி
+      <div class="desc">(Fermented rice gruel)</div>
+    </div>
+    <div class="item veg">🟢 Curd Rice (Old Style) – தயிர் சோறு</div>
+    <div class="item veg">🟢 Rice + Ghee + Sugar – நெய் சோறு + சர்க்கரை</div>
   </div>
 
-  <!-- WEEKDAY MEAL -->
-  <div class="section">
-    <div class="section-title">🍌 Traditional Banana Leaf Meal</div>
-    <div class="card">
-      <span class="badge" data-en="Mon–Fri • ₹249 per person"
-            data-ta="திங்கள்–வெள்ளி • ₹249">
-            Mon–Fri • ₹249 per person
-      </span>
-
-      <div class="item"><span data-en="White Rice" data-ta="வெள்ளை சாதம்">White Rice</span><span class="veg">🟢</span></div>
-      <div class="item"><span data-en="Sambar, Rasam, More Kuzhambu"
-                               data-ta="சாம்பார், ரசம், மோர் குழம்பு">
-                               Sambar, Rasam, More Kuzhambu</span></div>
-      <div class="item"><span data-en="Poriyal, Kootu" data-ta="பொரியல், கூட்டு">Poriyal, Kootu</span></div>
-      <div class="item"><span data-en="Curd, Dessert" data-ta="தயிர், இனிப்பு">Curd, Dessert</span></div>
-
-      <div class="highlight">“Paati veettu saapadu nyabagam”</div>
-    </div>
+  <div class="sub-title">🍲 Old-Style Kuzhambu & Sides</div>
+  <div class="card">
+    <div class="item veg">🟢 Vatha Kuzhambu – வத்தல் குழம்பு</div>
+    <div class="item veg">🟢 Milagu Kuzhambu – மிளகு குழம்பு</div>
+    <div class="item veg">🟢 Puli Kuzhambu – புளி குழம்பு</div>
+    <div class="item veg">🟢 Thalagam (Temple Style) – தாளகம்</div>
+    <div class="item veg">🟢 Keerai Masiyal – கீரை மசியல்</div>
   </div>
 
-  <!-- SUNDAY -->
-  <div class="section">
-    <div class="section-title">🍗 Sunday & Festival Special</div>
-    <div class="card">
-      <div class="item"><span data-en="Veg Naatu Feast" data-ta="சைவ நாட்டுக் விருந்து">Veg Naatu Feast</span><span class="veg">🟢 ₹329</span></div>
-      <div class="item"><span data-en="Naatu Kozhi Feast" data-ta="நாட்டு கோழி விருந்து">Naatu Kozhi Feast</span><span class="nonveg">🔴 ₹399</span></div>
-    </div>
+  <div class="sub-title">🥥 Traditional Sides</div>
+  <div class="card">
+    <div class="item veg">🟢 Vendhaya Thuvaiyal – வெந்தய துவையல்</div>
+    <div class="item veg">🟢 Vengaaya Thogayal – வெங்காயத் துவையல்</div>
+    <div class="item veg">🟢 Mangai Thokku – மாங்காய் தொக்கு</div>
+    <div class="item veg">🟢 Kallu Uppu – கல் உப்பு</div>
+    <div class="item veg">🟢 Appalam – அப்பளம்</div>
   </div>
+</div>
+
+<!-- HERITAGE NON-VEG -->
+<div class="section">
+  <div class="section-title">🍗 HERITAGE NON-VEG MENU</div>
+
+  <div class="sub-title">🐟 Old Village Non-Veg</div>
+  <div class="card">
+    <div class="item nonveg">🔴 Karuvadu – கருவாடு
+      <div class="desc">(Fire-roasted dry fish)</div>
+    </div>
+    <div class="item nonveg">🔴 Karuvadu Kuzhambu – கருவாட்டு குழம்பு</div>
+    <div class="item nonveg">🔴 Meen Thokku – மீன் தொக்கு</div>
+  </div>
+
+  <div class="sub-title">🐓 Country Chicken</div>
+  <div class="card">
+    <div class="item nonveg">🔴 Pazhaya Naatu Kozhi Kuzhambu
+      <div class="desc">(Next-day stored flavour)</div>
+    </div>
+    <div class="item nonveg">🔴 Naatu Kozhi Rasam – நாட்டு கோழி ரசம்</div>
+  </div>
+
+  <div class="sub-title">🐐 Old-Time Meat</div>
+  <div class="card">
+    <div class="item nonveg">🔴 Aatu Eeral Kuzhambu – ஆட்டு ஈரல் குழம்பு</div>
+    <div class="item nonveg">🔴 Mutton Bone Rasam – மட்டன் எலும்பு ரசம்</div>
+  </div>
+</div>
+
+<!-- COMBO -->
+<div class="section">
+  <div class="section-title">🍽️ HERITAGE COMBO MEALS</div>
+  <div class="card">
+    <div class="item">🌾 Uzhavan Saapadu – Pazhaya Sadham, Karuvadu, Onion, Kallu Uppu, Buttermilk</div>
+    <div class="item">🌼 Paati Veettu Saapadu – Pazhaya Kanji, Vendhaya Thuvaiyal, Pickle, Appalam</div>
+  </div>
+</div>
+
+<!-- KIDS -->
+<div class="section">
+  <div class="section-title">🧒 KIDS MENU – Kutty Kaalam Saapadu</div>
+  <div class="card">
+    <div class="item veg">🟢 Soft White Rice</div>
+    <div class="item veg">🟢 Mild Sambar</div>
+    <div class="item veg">🟢 Potato Poriyal</div>
+    <div class="item veg">🟢 Curd & Sweet</div>
+  </div>
+</div>
 
 </div>
 
 <footer>
-🌾 Freshly prepared • Banana Leaf Served • Olden-day Recipes<br>
-A journey back to our childhood memories
+❤️ No food waste • Natural fermentation • Mild spice<br>
+Food that tells a story<br><br>
+“Idhu saapadu mattum illa… idhu namma ninaivu.”
 </footer>
 
 </body>
