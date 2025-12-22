@@ -28,7 +28,7 @@
   background-position: center;
   background-attachment: fixed;
 } */
-  body {
+  /* body {
   margin: 0;
   font-family: Georgia, serif;
   color: #3b2f2f;
@@ -43,7 +43,25 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+} */
+  body {
+  margin: 0;
+  min-height: 100vh;   /* 👈 THIS IS CRITICAL */
+  font-family: Georgia, serif;
+  color: #3b2f2f;
+
+  background:
+    linear-gradient(
+      rgba(253, 246, 227, 0.94),
+      rgba(253, 246, 227, 0.94)
+    ),
+    url("./bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 header{
   background:linear-gradient(135deg,#7c2d12,#b45309);
