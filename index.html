@@ -16,7 +16,7 @@ body{
 header{
   background:linear-gradient(135deg,#7c2d12,#b45309);
   color:#fff;
-  padding:32px 20px;
+  padding:30px 20px;
   text-align:center;
 }
 
@@ -29,6 +29,20 @@ header p{
   margin-top:8px;
   font-size:14px;
   line-height:1.5;
+}
+
+.toggle{
+  margin-top:14px;
+}
+
+.toggle button{
+  background:#fde68a;
+  border:none;
+  padding:6px 14px;
+  margin:0 5px;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
 .container{
@@ -65,14 +79,14 @@ header p{
   font-size:15px;
 }
 
-.veg{ color:green; font-weight:bold; }
-.nonveg{ color:#b91c1c; font-weight:bold; }
-
 .desc{
   font-size:13px;
   color:#6b3f1d;
   margin-left:6px;
 }
+
+.veg{color:green;font-weight:bold;}
+.nonveg{color:#b91c1c;font-weight:bold;}
 
 .highlight{
   text-align:center;
@@ -90,16 +104,30 @@ footer{
   line-height:1.6;
 }
 </style>
+
+<script>
+function switchLang(lang){
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerText = el.getAttribute("data-" + lang);
+  });
+}
+</script>
 </head>
 
 <body>
 
 <header>
   <h1>🌾 YOUR MEMORIES</h1>
-  <p>
-    Where We Started<br>
-    80s–90s Tamil Village Food • Folk Culture • Childhood Memories
+
+  <p data-en="Where We Started — 80s–90s Tamil Village Food • Folk Culture • Childhood Memories"
+     data-ta="நாம் தொடங்கிய இடம் — 80–90களின் தமிழ் கிராம உணவு • மக்கள் பண்பாடு • குழந்தைப் பருவ நினைவுகள்">
+     Where We Started — 80s–90s Tamil Village Food • Folk Culture • Childhood Memories
   </p>
+
+  <div class="toggle">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ta')">தமிழ்</button>
+  </div>
 </header>
 
 <div class="container">
@@ -108,82 +136,65 @@ footer{
 <div class="section">
   <div class="section-title">🍌 HERITAGE VEG MENU</div>
 
-  <div class="sub-title">🍚 Pazhaya Murai Unavu (Heritage Rice)</div>
+  <div class="sub-title">🍚 Pazhaya Murai Unavu</div>
   <div class="card">
-    <div class="item veg">🟢 Pazhaya Sadham – பழைய சோறு
-      <div class="desc">(Overnight soaked rice – farmer’s food)</div>
+    <div class="item veg" data-en="🟢 Pazhaya Sadham (Overnight soaked rice)"
+         data-ta="🟢 பழைய சோறு (நேற்று வைத்த சாதம்)">
+         🟢 Pazhaya Sadham (Overnight soaked rice)
     </div>
-    <div class="item veg">🟢 Pazhaya Kanji – பழைய கஞ்சி
-      <div class="desc">(Fermented rice gruel)</div>
+
+    <div class="item veg" data-en="🟢 Pazhaya Kanji (Fermented rice gruel)"
+         data-ta="🟢 பழைய கஞ்சி (புளித்த கஞ்சி)">
+         🟢 Pazhaya Kanji (Fermented rice gruel)
     </div>
-    <div class="item veg">🟢 Curd Rice (Old Style) – தயிர் சோறு</div>
-    <div class="item veg">🟢 Rice + Ghee + Sugar – நெய் சோறு + சர்க்கரை</div>
-  </div>
 
-  <div class="sub-title">🍲 Old-Style Kuzhambu & Sides</div>
-  <div class="card">
-    <div class="item veg">🟢 Vatha Kuzhambu – வத்தல் குழம்பு</div>
-    <div class="item veg">🟢 Milagu Kuzhambu – மிளகு குழம்பு</div>
-    <div class="item veg">🟢 Puli Kuzhambu – புளி குழம்பு</div>
-    <div class="item veg">🟢 Thalagam (Temple Style) – தாளகம்</div>
-    <div class="item veg">🟢 Keerai Masiyal – கீரை மசியல்</div>
-  </div>
+    <div class="item veg" data-en="🟢 Curd Rice – Old Style"
+         data-ta="🟢 தயிர் சோறு (பழைய முறை)">
+         🟢 Curd Rice – Old Style
+    </div>
 
-  <div class="sub-title">🥥 Traditional Sides</div>
-  <div class="card">
-    <div class="item veg">🟢 Vendhaya Thuvaiyal – வெந்தய துவையல்</div>
-    <div class="item veg">🟢 Vengaaya Thogayal – வெங்காயத் துவையல்</div>
-    <div class="item veg">🟢 Mangai Thokku – மாங்காய் தொக்கு</div>
-    <div class="item veg">🟢 Kallu Uppu – கல் உப்பு</div>
-    <div class="item veg">🟢 Appalam – அப்பளம்</div>
+    <div class="item veg" data-en="🟢 Rice + Ghee + Sugar"
+         data-ta="🟢 நெய் சோறு + சர்க்கரை">
+         🟢 Rice + Ghee + Sugar
+    </div>
   </div>
 </div>
 
-<!-- HERITAGE NON-VEG -->
+<!-- HERITAGE NON VEG -->
 <div class="section">
   <div class="section-title">🍗 HERITAGE NON-VEG MENU</div>
 
-  <div class="sub-title">🐟 Old Village Non-Veg</div>
   <div class="card">
-    <div class="item nonveg">🔴 Karuvadu – கருவாடு
-      <div class="desc">(Fire-roasted dry fish)</div>
+    <div class="item nonveg" data-en="🔴 Karuvadu (Fire roasted dry fish)"
+         data-ta="🔴 கருவாடு (அடுப்பில் வாட்டியது)">
+         🔴 Karuvadu (Fire roasted dry fish)
     </div>
-    <div class="item nonveg">🔴 Karuvadu Kuzhambu – கருவாட்டு குழம்பு</div>
-    <div class="item nonveg">🔴 Meen Thokku – மீன் தொக்கு</div>
-  </div>
 
-  <div class="sub-title">🐓 Country Chicken</div>
-  <div class="card">
-    <div class="item nonveg">🔴 Pazhaya Naatu Kozhi Kuzhambu
-      <div class="desc">(Next-day stored flavour)</div>
+    <div class="item nonveg" data-en="🔴 Pazhaya Naatu Kozhi Kuzhambu"
+         data-ta="🔴 நேத்து வைத்த நாட்டு கோழி குழம்பு">
+         🔴 Pazhaya Naatu Kozhi Kuzhambu
     </div>
-    <div class="item nonveg">🔴 Naatu Kozhi Rasam – நாட்டு கோழி ரசம்</div>
-  </div>
 
-  <div class="sub-title">🐐 Old-Time Meat</div>
-  <div class="card">
-    <div class="item nonveg">🔴 Aatu Eeral Kuzhambu – ஆட்டு ஈரல் குழம்பு</div>
-    <div class="item nonveg">🔴 Mutton Bone Rasam – மட்டன் எலும்பு ரசம்</div>
-  </div>
-</div>
-
-<!-- COMBO -->
-<div class="section">
-  <div class="section-title">🍽️ HERITAGE COMBO MEALS</div>
-  <div class="card">
-    <div class="item">🌾 Uzhavan Saapadu – Pazhaya Sadham, Karuvadu, Onion, Kallu Uppu, Buttermilk</div>
-    <div class="item">🌼 Paati Veettu Saapadu – Pazhaya Kanji, Vendhaya Thuvaiyal, Pickle, Appalam</div>
+    <div class="item nonveg" data-en="🔴 Mutton Bone Rasam"
+         data-ta="🔴 மட்டன் எலும்பு ரசம்">
+         🔴 Mutton Bone Rasam
+    </div>
   </div>
 </div>
 
 <!-- KIDS -->
 <div class="section">
-  <div class="section-title">🧒 KIDS MENU – Kutty Kaalam Saapadu</div>
+  <div class="section-title">🧒 KIDS MENU</div>
   <div class="card">
-    <div class="item veg">🟢 Soft White Rice</div>
-    <div class="item veg">🟢 Mild Sambar</div>
-    <div class="item veg">🟢 Potato Poriyal</div>
-    <div class="item veg">🟢 Curd & Sweet</div>
+    <div class="item veg" data-en="🟢 Soft Rice + Mild Sambar"
+         data-ta="🟢 மென்மையான சாதம் + மிதமான சாம்பார்">
+         🟢 Soft Rice + Mild Sambar
+    </div>
+
+    <div class="item veg" data-en="🟢 Curd Rice + Sweet"
+         data-ta="🟢 தயிர் சோறு + இனிப்பு">
+         🟢 Curd Rice + Sweet
+    </div>
   </div>
 </div>
 
